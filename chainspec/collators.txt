@@ -3,6 +3,7 @@
 -lbasic-authorship=trace \
 --collator \
 --force-authoring \
+--node-key-file ./chainspec/node-key-node02 \
 --chain ./chainspec/raw-parachain-chainspec.json \
 --base-path ./tmp/node02 \
 --port 40320 \
@@ -22,6 +23,7 @@
 -lbasic-authorship=trace \
 --collator \
 --force-authoring \
+--node-key-file ./chainspec/node-key-node01 \
 --chain ./chainspec/raw-parachain-chainspec.json \
 --base-path ./tmp/node01 \
 --port 40324 \
