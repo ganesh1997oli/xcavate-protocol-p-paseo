@@ -20,7 +20,7 @@ chain = "dev"
 
 [[parachains.collators]]
 name = "collator01"
-command = "./target/release/parachain-template-node"
+command = "./target/release/xcavate-parachain-node"
 ws_port = 9910
 rpc_port = 8833
 args = ["-lxcm=trace,pallet-assets=trace"]
@@ -29,5 +29,5 @@ args = ["-lxcm=trace,pallet-assets=trace"]
 name = "collator02"
 ws_port = 9911
 rpc_port = 8822
-command = "./target/release/parachain-template-node"
+command = "./target/release/xcavate-parachain-node"
 args = ["-lxcm=trace,pallet-assets=trace"]

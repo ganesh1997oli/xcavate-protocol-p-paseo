@@ -61,5 +61,5 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            target/release/parachain-template-node
-            target/release/wbuild/parachain-template-runtime/parachain_template_runtime.compact.compressed.wasm
+            target/release/xcavate-parachain-node
+            target/release/wbuild/xcavate-parachain-runtime/xcavate_parachain_runtime.compact.compressed.wasm

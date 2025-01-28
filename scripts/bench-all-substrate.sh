@@ -41,7 +41,7 @@ pallets=(
 cargo build $standard_args
 
 for pallet in "${pallets[@]}"; do
-    ./target/release/parachain-template-node benchmark pallet \
+    ./target/release/xcavate-parachain-node benchmark pallet \
         --chain dev \
         --wasm-execution=compiled \
         --pallet $pallet \

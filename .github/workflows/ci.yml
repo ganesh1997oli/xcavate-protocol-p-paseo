@@ -61,7 +61,7 @@ jobs:
         uses: ./.github/actions/macos-dependencies
 
       - name: Build the node individually in release mode
-        run: cargo build --package parachain-template-node --release
+        run: cargo build --package xcavate-parachain-node --release
         timeout-minutes: 90
 
       # This test only makes sure the node got successfully built
@@ -69,7 +69,7 @@ jobs:
       # A test including a relaychain will be done separately.
       - name: Check that the node starts up
         run: |
-          ./target/release/parachain-template-node --dev 2>&1 | tee out.txt &
+          ./target/release/xcavate-parachain-node --dev 2>&1 | tee out.txt &
           until curl -s '127.0.0.1:9944'; do sleep 5; done
           until cat out.txt | grep -s "💤 Idle"; do sleep 5; done
         shell: bash

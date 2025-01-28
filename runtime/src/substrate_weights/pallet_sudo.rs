@@ -8,7 +8,7 @@
 //! WASM-EXECUTION: `Compiled`, CHAIN: `Some("dev")`, DB CACHE: 1024
 
 // Executed Command:
-// ./target/release/parachain-template-node
+// ./target/release/xcavate-parachain-node
 // benchmark
 // pallet
 // --chain
@@ -26,7 +26,7 @@
 // 50
 // --repeat
 // 20
-// --output=./runtime/src/weights/pallet_sudo.rs
+// --output=./runtime/src/substrate_weights/pallet_sudo.rs
 
 #![cfg_attr(rustfmt, rustfmt_skip)]
 #![allow(unused_parens)]
@@ -45,8 +45,8 @@ impl<T: frame_system::Config> pallet_sudo::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `98`
 		//  Estimated: `1517`
-		// Minimum execution time: 13_156_000 picoseconds.
-		Weight::from_parts(13_762_000, 0)
+		// Minimum execution time: 13_377_000 picoseconds.
+		Weight::from_parts(15_121_000, 0)
 			.saturating_add(Weight::from_parts(0, 1517))
 			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(T::DbWeight::get().writes(1))
@@ -57,8 +57,8 @@ impl<T: frame_system::Config> pallet_sudo::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `98`
 		//  Estimated: `1517`
-		// Minimum execution time: 14_167_000 picoseconds.
-		Weight::from_parts(14_684_000, 0)
+		// Minimum execution time: 14_374_000 picoseconds.
+		Weight::from_parts(15_409_000, 0)
 			.saturating_add(Weight::from_parts(0, 1517))
 			.saturating_add(T::DbWeight::get().reads(1))
 	}
@@ -68,8 +68,8 @@ impl<T: frame_system::Config> pallet_sudo::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `98`
 		//  Estimated: `1517`
-		// Minimum execution time: 14_034_000 picoseconds.
-		Weight::from_parts(14_408_000, 0)
+		// Minimum execution time: 14_738_000 picoseconds.
+		Weight::from_parts(16_561_000, 0)
 			.saturating_add(Weight::from_parts(0, 1517))
 			.saturating_add(T::DbWeight::get().reads(1))
 	}
@@ -79,8 +79,8 @@ impl<T: frame_system::Config> pallet_sudo::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `98`
 		//  Estimated: `1517`
-		// Minimum execution time: 11_692_000 picoseconds.
-		Weight::from_parts(12_406_000, 0)
+		// Minimum execution time: 12_247_000 picoseconds.
+		Weight::from_parts(12_705_000, 0)
 			.saturating_add(Weight::from_parts(0, 1517))
 			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(T::DbWeight::get().writes(1))

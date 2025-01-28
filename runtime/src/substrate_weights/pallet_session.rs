@@ -8,7 +8,7 @@
 //! WASM-EXECUTION: `Compiled`, CHAIN: `Some("dev")`, DB CACHE: 1024
 
 // Executed Command:
-// ./target/release/parachain-template-node
+// ./target/release/xcavate-parachain-node
 // benchmark
 // pallet
 // --chain
@@ -26,7 +26,7 @@
 // 50
 // --repeat
 // 20
-// --output=./runtime/src/weights/pallet_session.rs
+// --output=./runtime/src/substrate_weights/pallet_session.rs
 
 #![cfg_attr(rustfmt, rustfmt_skip)]
 #![allow(unused_parens)]
@@ -47,8 +47,8 @@ impl<T: frame_system::Config> pallet_session::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `254`
 		//  Estimated: `3719`
-		// Minimum execution time: 23_944_000 picoseconds.
-		Weight::from_parts(24_731_000, 0)
+		// Minimum execution time: 23_515_000 picoseconds.
+		Weight::from_parts(24_629_000, 0)
 			.saturating_add(Weight::from_parts(0, 3719))
 			.saturating_add(T::DbWeight::get().reads(2))
 			.saturating_add(T::DbWeight::get().writes(2))
@@ -61,8 +61,8 @@ impl<T: frame_system::Config> pallet_session::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `277`
 		//  Estimated: `3742`
-		// Minimum execution time: 16_800_000 picoseconds.
-		Weight::from_parts(17_361_000, 0)
+		// Minimum execution time: 17_301_000 picoseconds.
+		Weight::from_parts(17_659_000, 0)
 			.saturating_add(Weight::from_parts(0, 3742))
 			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(T::DbWeight::get().writes(2))

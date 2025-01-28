@@ -8,7 +8,7 @@
 //! WASM-EXECUTION: `Compiled`, CHAIN: `Some("dev")`, DB CACHE: 1024
 
 // Executed Command:
-// ./target/release/parachain-template-node
+// ./target/release/xcavate-parachain-node
 // benchmark
 // pallet
 // --chain
@@ -26,7 +26,7 @@
 // 50
 // --repeat
 // 20
-// --output=./runtime/src/weights/cumulus_pallet_parachain_system.rs
+// --output=./runtime/src/substrate_weights/cumulus_pallet_parachain_system.rs
 
 #![cfg_attr(rustfmt, rustfmt_skip)]
 #![allow(unused_parens)]
@@ -54,11 +54,11 @@ impl<T: frame_system::Config> cumulus_pallet_parachain_system::WeightInfo for We
 		// Proof Size summary in bytes:
 		//  Measured:  `12`
 		//  Estimated: `3517`
-		// Minimum execution time: 2_328_000 picoseconds.
-		Weight::from_parts(282_407_447, 0)
+		// Minimum execution time: 2_415_000 picoseconds.
+		Weight::from_parts(2_457_000, 0)
 			.saturating_add(Weight::from_parts(0, 3517))
-			// Standard Error: 407_387
-			.saturating_add(Weight::from_parts(375_722_595, 0).saturating_mul(n.into()))
+			// Standard Error: 813_988
+			.saturating_add(Weight::from_parts(404_455_184, 0).saturating_mul(n.into()))
 			.saturating_add(T::DbWeight::get().reads(3))
 			.saturating_add(T::DbWeight::get().writes(4))
 			.saturating_add(T::DbWeight::get().writes((1_u64).saturating_mul(n.into())))

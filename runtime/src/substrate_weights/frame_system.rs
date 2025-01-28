@@ -8,7 +8,7 @@
 //! WASM-EXECUTION: `Compiled`, CHAIN: `Some("dev")`, DB CACHE: 1024
 
 // Executed Command:
-// ./target/release/parachain-template-node
+// ./target/release/xcavate-parachain-node
 // benchmark
 // pallet
 // --chain
@@ -26,7 +26,7 @@
 // 50
 // --repeat
 // 20
-// --output=./runtime/src/weights/frame_system.rs
+// --output=./runtime/src/substrate_weights/frame_system.rs
 
 #![cfg_attr(rustfmt, rustfmt_skip)]
 #![allow(unused_parens)]
@@ -44,22 +44,22 @@ impl<T: frame_system::Config> frame_system::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `0`
 		//  Estimated: `0`
-		// Minimum execution time: 2_624_000 picoseconds.
-		Weight::from_parts(18_238_808, 0)
+		// Minimum execution time: 2_470_000 picoseconds.
+		Weight::from_parts(2_611_000, 0)
 			.saturating_add(Weight::from_parts(0, 0))
 			// Standard Error: 1
-			.saturating_add(Weight::from_parts(456, 0).saturating_mul(b.into()))
+			.saturating_add(Weight::from_parts(504, 0).saturating_mul(b.into()))
 	}
 	/// The range of component `b` is `[0, 3932160]`.
 	fn remark_with_event(b: u32, ) -> Weight {
 		// Proof Size summary in bytes:
 		//  Measured:  `0`
 		//  Estimated: `0`
-		// Minimum execution time: 6_376_000 picoseconds.
-		Weight::from_parts(6_519_000, 0)
+		// Minimum execution time: 6_948_000 picoseconds.
+		Weight::from_parts(7_096_000, 0)
 			.saturating_add(Weight::from_parts(0, 0))
-			// Standard Error: 3
-			.saturating_add(Weight::from_parts(2_158, 0).saturating_mul(b.into()))
+			// Standard Error: 1
+			.saturating_add(Weight::from_parts(2_384, 0).saturating_mul(b.into()))
 	}
 	/// Storage: `System::Digest` (r:1 w:1)
 	/// Proof: `System::Digest` (`max_values`: Some(1), `max_size`: None, mode: `Measured`)
@@ -69,8 +69,8 @@ impl<T: frame_system::Config> frame_system::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `0`
 		//  Estimated: `1485`
-		// Minimum execution time: 4_143_000 picoseconds.
-		Weight::from_parts(4_546_000, 0)
+		// Minimum execution time: 4_197_000 picoseconds.
+		Weight::from_parts(4_500_000, 0)
 			.saturating_add(Weight::from_parts(0, 1485))
 			.saturating_add(T::DbWeight::get().reads(1))
 			.saturating_add(T::DbWeight::get().writes(2))
@@ -91,8 +91,8 @@ impl<T: frame_system::Config> frame_system::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `127`
 		//  Estimated: `1612`
-		// Minimum execution time: 166_439_933_000 picoseconds.
-		Weight::from_parts(170_351_422_000, 0)
+		// Minimum execution time: 184_597_434_000 picoseconds.
+		Weight::from_parts(188_723_272_000, 0)
 			.saturating_add(Weight::from_parts(0, 1612))
 			.saturating_add(T::DbWeight::get().reads(4))
 			.saturating_add(T::DbWeight::get().writes(3))
@@ -104,11 +104,11 @@ impl<T: frame_system::Config> frame_system::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `0`
 		//  Estimated: `0`
-		// Minimum execution time: 2_426_000 picoseconds.
-		Weight::from_parts(2_548_000, 0)
+		// Minimum execution time: 2_607_000 picoseconds.
+		Weight::from_parts(2_697_000, 0)
 			.saturating_add(Weight::from_parts(0, 0))
-			// Standard Error: 2_415
-			.saturating_add(Weight::from_parts(1_047_675, 0).saturating_mul(i.into()))
+			// Standard Error: 2_214
+			.saturating_add(Weight::from_parts(1_141_629, 0).saturating_mul(i.into()))
 			.saturating_add(T::DbWeight::get().writes((1_u64).saturating_mul(i.into())))
 	}
 	/// Storage: `Skipped::Metadata` (r:0 w:0)
@@ -118,11 +118,11 @@ impl<T: frame_system::Config> frame_system::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `0`
 		//  Estimated: `0`
-		// Minimum execution time: 2_415_000 picoseconds.
-		Weight::from_parts(2_509_000, 0)
+		// Minimum execution time: 2_570_000 picoseconds.
+		Weight::from_parts(2_707_000, 0)
 			.saturating_add(Weight::from_parts(0, 0))
-			// Standard Error: 1_411
-			.saturating_add(Weight::from_parts(803_686, 0).saturating_mul(i.into()))
+			// Standard Error: 2_114
+			.saturating_add(Weight::from_parts(872_383, 0).saturating_mul(i.into()))
 			.saturating_add(T::DbWeight::get().writes((1_u64).saturating_mul(i.into())))
 	}
 	/// Storage: `Skipped::Metadata` (r:0 w:0)
@@ -132,11 +132,11 @@ impl<T: frame_system::Config> frame_system::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `63 + p * (69 ±0)`
 		//  Estimated: `65 + p * (70 ±0)`
-		// Minimum execution time: 4_644_000 picoseconds.
-		Weight::from_parts(4_959_000, 0)
+		// Minimum execution time: 4_950_000 picoseconds.
+		Weight::from_parts(5_186_000, 0)
 			.saturating_add(Weight::from_parts(0, 65))
-			// Standard Error: 2_541
-			.saturating_add(Weight::from_parts(1_512_163, 0).saturating_mul(p.into()))
+			// Standard Error: 1_987
+			.saturating_add(Weight::from_parts(1_666_802, 0).saturating_mul(p.into()))
 			.saturating_add(T::DbWeight::get().reads((1_u64).saturating_mul(p.into())))
 			.saturating_add(T::DbWeight::get().writes((1_u64).saturating_mul(p.into())))
 			.saturating_add(Weight::from_parts(0, 70).saturating_mul(p.into()))
@@ -147,8 +147,8 @@ impl<T: frame_system::Config> frame_system::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `0`
 		//  Estimated: `0`
-		// Minimum execution time: 9_526_000 picoseconds.
-		Weight::from_parts(13_868_000, 0)
+		// Minimum execution time: 10_028_000 picoseconds.
+		Weight::from_parts(13_172_000, 0)
 			.saturating_add(Weight::from_parts(0, 0))
 			.saturating_add(T::DbWeight::get().writes(1))
 	}
@@ -170,8 +170,8 @@ impl<T: frame_system::Config> frame_system::WeightInfo for WeightInfo<T> {
 		// Proof Size summary in bytes:
 		//  Measured:  `149`
 		//  Estimated: `1634`
-		// Minimum execution time: 173_403_260_000 picoseconds.
-		Weight::from_parts(178_865_650_000, 0)
+		// Minimum execution time: 189_566_339_000 picoseconds.
+		Weight::from_parts(195_463_861_000, 0)
 			.saturating_add(Weight::from_parts(0, 1634))
 			.saturating_add(T::DbWeight::get().reads(5))
 			.saturating_add(T::DbWeight::get().writes(4))
