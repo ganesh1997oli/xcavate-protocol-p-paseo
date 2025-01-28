@@ -11,6 +11,7 @@ pub mod apis;
 mod benchmarks;
 mod configs;
 mod weights;
+mod substrate_weights;
 
 extern crate alloc;
 use alloc::vec::Vec;
@@ -36,9 +37,6 @@ pub use sp_runtime::{MultiAddress, Perbill, Permill};
 pub use sp_runtime::BuildStorage;
 
 use weights::ExtrinsicBaseWeight;
-
-/// Import the template pallet.
-pub use pallet_parachain_template;
 
 /// Alias to 512-bit hash when used in the context of a transaction signature on the chain.
 pub type Signature = MultiSignature;
@@ -299,9 +297,6 @@ mod runtime {
 	#[runtime::pallet_index(33)]
 	pub type MessageQueue = pallet_message_queue;
 
-	// Template
-	#[runtime::pallet_index(50)]
-	pub type TemplatePallet = pallet_parachain_template;
 }
 
 #[docify::export(register_validate_block)]
