@@ -38,6 +38,53 @@ pub fn template_session_keys(keys: AuraId) -> runtime::SessionKeys {
 	runtime::SessionKeys { aura: keys }
 }
 
+pub fn xcavate_live_config() -> ChainSpec {
+	// Give your base currency a unit name and decimal places
+	let mut properties = sc_chain_spec::Properties::new();
+    properties.insert("tokenSymbol".into(), xcavate::TOKEN_SYMBOL.into());
+    properties.insert("tokenDecimals".into(), xcavate::TOKEN_DECIMALS.into());
+    properties.insert("ss58Format".into(), xcavate::SS58_FORMAT.into());
+
+	// richard
+    let collator_0_account_id: AccountId =
+        AccountId::from_ss58check("1xGrVAzbHfUfxFMRhUsDKWFcJNf1XMSNE2UqRjkYyFhrnqt").unwrap();
+    let collator_0_aura_id: AuraId =
+        AuraId::from_ss58check("1xGrVAzbHfUfxFMRhUsDKWFcJNf1XMSNE2UqRjkYyFhrnqt").unwrap();
+    // alex
+    let collator_1_account_id: AccountId =
+        AccountId::from_ss58check("1uWNn87BVmATvKRHW6ptAdhTBaYgYBakeKhJnRYCCPJJGaY").unwrap();
+    let collator_1_aura_id: AuraId =
+        AuraId::from_ss58check("1uWNn87BVmATvKRHW6ptAdhTBaYgYBakeKhJnRYCCPJJGaY").unwrap();
+
+	ChainSpec::builder(
+		runtime::WASM_BINARY.expect("WASM binary was not built, please build it!"),
+		Extensions {
+            relay_chain: xcavate::RELAY_CHAIN.into(),
+            // You MUST set this to the correct network!
+            para_id: xcavate::PARACHAIN_ID,
+		},
+	)
+	.with_name("Xcavate")
+	.with_id("xcav")
+	.with_chain_type(ChainType::Live)
+	.with_genesis_config_patch(testnet_genesis(
+		// initial collators.
+        vec![
+            // XCAVATE COLLATOR 0
+            (collator_0_account_id, collator_0_aura_id),
+            // XCAVATE COLLATOR 1
+            (collator_1_account_id, collator_1_aura_id),
+        ],
+		get_endowed_accounts_with_balance(),
+		get_root_account(),
+		xcavate::PARACHAIN_ID.into(),
+	))
+	.with_protocol_id("xcavate-live")
+    .with_properties(properties)
+	.build()
+}
+
+
 pub fn development_config() -> ChainSpec {
 	// Give your base currency a unit name and decimal places
 	let mut properties = sc_chain_spec::Properties::new();

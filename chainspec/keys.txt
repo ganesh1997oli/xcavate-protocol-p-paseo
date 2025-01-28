@@ -1,0 +1,40 @@
+for node02
+^Cubuntu@ip-172-31-20-38:~/Xcavate_paseo_node./target/release/xcavate-parachain-node key generate --scheme Sr25519 --password-interactive
+Key password: 
+Secret phrase:       tooth only face model kingdom width disorder crash devote loop mask say
+  Network ID:        substrate
+  Secret seed:       0xe85140b4fe8b2d9c09d07543ac03525578d535bea86fc2418652a77a0bf1a459
+  Public key (hex):  0xe8a444e9d2e304e754f692168fd13d67af39931b08dde036fa7fe22859795717
+  Account ID:        0xe8a444e9d2e304e754f692168fd13d67af39931b08dde036fa7fe22859795717
+  Public key (SS58): 5HKjmJDWNBgFo1Qvbaxn1yabvyRzNNAEd57qruG5VAGTEM8s
+  SS58 Address:      5HKjmJDWNBgFo1Qvbaxn1yabvyRzNNAEd57qruG5VAGTEM8s
+ubuntu@ip-172-31-20-38:~/Xcavate_paseo_node$ 
+
+
+
+// insert in the node02
+./target/release/xcavate-parachain-node key insert --base-path ./tmp/node02 \
+  --chain raw-parachain-chainspec.json \
+  --scheme Sr25519 \
+  --suri "tooth only face model kingdom width disorder crash devote loop mask say" \
+  --password-interactive \
+  --key-type aura
+
+// aura key for node01
+ubuntu@ip-172-31-20-38:~/Xcavate_paseo_node$ ./target/release/xcavate-parachain-node key generate --scheme Sr25519 --password-interactive
+Key password: 
+Secret phrase:       saddle unveil hill banner mule blood badge enter goose shield envelope come
+  Network ID:        substrate
+  Secret seed:       0x3b149b5bafb20985e0473dd3b785865040eb9ee2a1ee1776c1135e2f9f51d47c
+  Public key (hex):  0x12d87fe8d823e6abb61b37e665bcd3c77fca448180297629ca0c7738a02c1e32
+  Account ID:        0x12d87fe8d823e6abb61b37e665bcd3c77fca448180297629ca0c7738a02c1e32
+  Public key (SS58): 5CVR2ryYYUHj6AARZwnGrLpcaMN96zaW8ftWC2kmXMGu4xPE
+  SS58 Address:      5CVR2ryYYUHj6AARZwnGrLpcaMN96zaW8ftWC2kmXMGu4xPE
+ubuntu@ip-172-31-20-38:~/Xcavate_paseo_node$ 
+
+ganesholi@Ganeshs-MacBook-Air xcavate-on-kilt-dip-consumer % ./target/release/xcavate-parachain-node key insert --base-path ./tmp/node01 \
+  --chain raw-parachain-chainspec.json \
+  --scheme Sr25519 \
+  --suri "saddle unveil hill banner mule blood badge enter goose shield envelope come" \
+  --password-interactive \
+  --key-type aura

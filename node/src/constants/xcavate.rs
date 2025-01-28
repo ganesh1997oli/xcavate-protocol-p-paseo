@@ -1,6 +1,6 @@
 use xcavate_parachain_runtime::{Balance, UNIT};
 // para_id & relay_chain
-pub const PARACHAIN_ID: u32 = 4602;
+pub const PARACHAIN_ID: u32 = 4605;
 pub const RELAY_CHAIN: &str = "paseo";
 
 // token properties

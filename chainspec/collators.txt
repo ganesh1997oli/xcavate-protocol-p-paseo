@@ -1,0 +1,41 @@
+// general
+./target/release/xcavate-parachain-node \
+-lbasic-authorship=trace \
+--collator \
+--force-authoring \
+--chain ./chainspec/raw-parachain-chainspec.json \
+--base-path ./tmp/node02 \
+--port 40320 \
+--rpc-port 8821 \
+--rpc-cors=all \
+-- \
+--execution wasm \
+--chain ./chainspec/paseo.json \
+--port 30322 \
+--rpc-port 9923 \
+--rpc-methods unsafe \
+--unsafe-rpc-external \
+--blocks-pruning=256
+
+
+./target/release/xcavate-parachain-node \
+-lbasic-authorship=trace \
+--collator \
+--force-authoring \
+--chain ./chainspec/raw-parachain-chainspec.json \
+--base-path ./tmp/node01 \
+--port 40324 \
+--rpc-port 8825 \
+--bootnodes /ip4/127.0.0.1/tcp/40320/p2p/12D3KooWFKPqQ6Ldt1rKvvu1WsTyKb8nUyGmfSR5WQeYLtxhed1h \
+-- \
+--execution wasm \
+--chain ./chainspec/paseo.json \
+--port 30326 \
+--rpc-port 9927 \
+--rpc-methods unsafe \
+--unsafe-rpc-external \
+--blocks-pruning=256
+
+
+
+12D3KooWFKPqQ6Ldt1rKvvu1WsTyKb8nUyGmfSR5WQeYLtxhed1h
