@@ -1,40 +1,40 @@
 for node02
-^Cubuntu@ip-172-31-20-38:~/Xcavate_paseo_node./target/release/xcavate-parachain-node key generate --scheme Sr25519 --password-interactive
+ubuntu@ip-172-31-20-184:~/xcavate_parachain$ ./target/release/xcavate-parachain-node key generate --scheme Sr25519 --password-interactive
 Key password: 
-Secret phrase:       tooth only face model kingdom width disorder crash devote loop mask say
+Secret phrase:       gather outer vessel into mystery beef penalty service mansion drive canvas bike
   Network ID:        substrate
-  Secret seed:       0xe85140b4fe8b2d9c09d07543ac03525578d535bea86fc2418652a77a0bf1a459
-  Public key (hex):  0xe8a444e9d2e304e754f692168fd13d67af39931b08dde036fa7fe22859795717
-  Account ID:        0xe8a444e9d2e304e754f692168fd13d67af39931b08dde036fa7fe22859795717
-  Public key (SS58): 5HKjmJDWNBgFo1Qvbaxn1yabvyRzNNAEd57qruG5VAGTEM8s
-  SS58 Address:      5HKjmJDWNBgFo1Qvbaxn1yabvyRzNNAEd57qruG5VAGTEM8s
-ubuntu@ip-172-31-20-38:~/Xcavate_paseo_node$ 
+  Secret seed:       0x53423146851a9a856906dd11ff06c2b80aab2cca1784fc74676a99d0dcec3b3d
+  Public key (hex):  0xe06637767681465a01c48ea5a0f0075852dea74fd8e36240f308cd36d7758d0f
+  Account ID:        0xe06637767681465a01c48ea5a0f0075852dea74fd8e36240f308cd36d7758d0f
+  Public key (SS58): 5H8vwwQA9ktAJ7hfqButdFnxzhre6mSUCHBwSs4UQbbcMxFM
+  SS58 Address:      5H8vwwQA9ktAJ7hfqButdFnxzhre6mSUCHBwSs4UQbbcMxFM
+ubuntu@ip-172-31-20-184:~/xcavate_parachain$ 
 
 
 
 // insert in the node02
 ./target/release/xcavate-parachain-node key insert --base-path ./tmp/node02 \
-  --chain raw-parachain-chainspec.json \
+  --chain ./chainspec/raw-parachain-chainspec.json \
   --scheme Sr25519 \
-  --suri "tooth only face model kingdom width disorder crash devote loop mask say" \
+  --suri "gather outer vessel into mystery beef penalty service mansion drive canvas bike" \
   --password-interactive \
   --key-type aura
 
 // aura key for node01
-ubuntu@ip-172-31-20-38:~/Xcavate_paseo_node$ ./target/release/xcavate-parachain-node key generate --scheme Sr25519 --password-interactive
+ubuntu@ip-172-31-20-184:~/xcavate_parachain$ ./target/release/xcavate-parachain-node key generate --scheme Sr25519 --password-interactive
 Key password: 
-Secret phrase:       saddle unveil hill banner mule blood badge enter goose shield envelope come
+Secret phrase:       nuclear camp garage science wreck curtain rapid unfold faith elevator grain enter
   Network ID:        substrate
-  Secret seed:       0x3b149b5bafb20985e0473dd3b785865040eb9ee2a1ee1776c1135e2f9f51d47c
-  Public key (hex):  0x12d87fe8d823e6abb61b37e665bcd3c77fca448180297629ca0c7738a02c1e32
-  Account ID:        0x12d87fe8d823e6abb61b37e665bcd3c77fca448180297629ca0c7738a02c1e32
-  Public key (SS58): 5CVR2ryYYUHj6AARZwnGrLpcaMN96zaW8ftWC2kmXMGu4xPE
-  SS58 Address:      5CVR2ryYYUHj6AARZwnGrLpcaMN96zaW8ftWC2kmXMGu4xPE
-ubuntu@ip-172-31-20-38:~/Xcavate_paseo_node$ 
+  Secret seed:       0x587d860c4645fc1e88620653c5f43bd94db9b0370bb069ddd27668a9823e3e3a
+  Public key (hex):  0x98a2dc97e83d3f455a82068c7852e8641a3d31b6965286ec5059a875d5cac833
+  Account ID:        0x98a2dc97e83d3f455a82068c7852e8641a3d31b6965286ec5059a875d5cac833
+  Public key (SS58): 5FWqWrwrFaUo3K6JTEYFF3RkLkPSuTZztyRuGkJFo8grLXN3
+  SS58 Address:      5FWqWrwrFaUo3K6JTEYFF3RkLkPSuTZztyRuGkJFo8grLXN3
+ubuntu@ip-172-31-20-184:~/xcavate_parachain$  
 
 ganesholi@Ganeshs-MacBook-Air xcavate-on-kilt-dip-consumer % ./target/release/xcavate-parachain-node key insert --base-path ./tmp/node01 \
-  --chain raw-parachain-chainspec.json \
+  --chain ./chainspec/raw-parachain-chainspec.json \
   --scheme Sr25519 \
-  --suri "saddle unveil hill banner mule blood badge enter goose shield envelope come" \
+  --suri "nuclear camp garage science wreck curtain rapid unfold faith elevator grain enter" \
   --password-interactive \
   --key-type aura

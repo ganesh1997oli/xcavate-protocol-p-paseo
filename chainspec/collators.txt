@@ -3,7 +3,7 @@
 -lbasic-authorship=trace \
 --collator \
 --force-authoring \
---node-key-file ./chainspec/node-key-node02 \
+--node-key-file ../polkadot-sdk/node-key-node02 \
 --chain ./chainspec/raw-parachain-chainspec.json \
 --base-path ./tmp/node02 \
 --port 40320 \
@@ -23,12 +23,12 @@
 -lbasic-authorship=trace \
 --collator \
 --force-authoring \
---node-key-file ./chainspec/node-key-node01 \
+--node-key-file ../polkadot-sdk/node-key-node01 \
 --chain ./chainspec/raw-parachain-chainspec.json \
 --base-path ./tmp/node01 \
 --port 40324 \
 --rpc-port 8825 \
---bootnodes /ip4/127.0.0.1/tcp/40320/p2p/12D3KooWFKPqQ6Ldt1rKvvu1WsTyKb8nUyGmfSR5WQeYLtxhed1h \
+--bootnodes /ip4/127.0.0.1/tcp/40320/p2p/12D3KooWEQq9qidp3jRcJVxaxt8HiX5N3YeYw2LiqoG292ENm4yC \
 -- \
 --execution wasm \
 --chain ./chainspec/paseo.json \
@@ -40,4 +40,7 @@
 
 
 
-12D3KooWFKPqQ6Ldt1rKvvu1WsTyKb8nUyGmfSR5WQeYLtxhed1h
+12D3KooWEQq9qidp3jRcJVxaxt8HiX5N3YeYw2LiqoG292ENm4yC
+
+./target/release/xcavate-parachain-node purge-chain --chain ./chainspec/raw-parachain-chainspec.json
+./target/release/xcavate-parachain-node purge-chain --chain ./chainspec/plain-parachain-chainspec.json
