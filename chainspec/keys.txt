@@ -1,14 +1,14 @@
 for node02
 ubuntu@ip-172-31-20-184:~/xcavate_parachain$ ./target/release/xcavate-parachain-node key generate --scheme Sr25519 --password-interactive
 Key password: 
-Secret phrase:       gather outer vessel into mystery beef penalty service mansion drive canvas bike
+Secret phrase:       calm tiny ensure glove absurd obscure merit sample foam next weekend smoke
   Network ID:        substrate
-  Secret seed:       0x53423146851a9a856906dd11ff06c2b80aab2cca1784fc74676a99d0dcec3b3d
-  Public key (hex):  0xe06637767681465a01c48ea5a0f0075852dea74fd8e36240f308cd36d7758d0f
-  Account ID:        0xe06637767681465a01c48ea5a0f0075852dea74fd8e36240f308cd36d7758d0f
-  Public key (SS58): 5H8vwwQA9ktAJ7hfqButdFnxzhre6mSUCHBwSs4UQbbcMxFM
-  SS58 Address:      5H8vwwQA9ktAJ7hfqButdFnxzhre6mSUCHBwSs4UQbbcMxFM
-ubuntu@ip-172-31-20-184:~/xcavate_parachain$ 
+  Secret seed:       0x84c2892370af9debd3f4b159a14317f7a53c2da6a3a31b4d004fcc713270ff28
+  Public key (hex):  0xd26ce01782cfc6b75be5eff4cedaa5ddcdab46eb933e211b7246e2258f64ac12
+  Account ID:        0xd26ce01782cfc6b75be5eff4cedaa5ddcdab46eb933e211b7246e2258f64ac12
+  Public key (SS58): 5GpcFnNypuDi4eNkmFzBs8ZPBq8WKsrxcUReR8RcsLQtduKU
+  SS58 Address:      5GpcFnNypuDi4eNkmFzBs8ZPBq8WKsrxcUReR8RcsLQtduKU
+ubuntu@ip-172-31-20-184:~/xcavate_parachain$   
 
 
 
@@ -16,25 +16,25 @@ ubuntu@ip-172-31-20-184:~/xcavate_parachain$
 ./target/release/xcavate-parachain-node key insert --base-path ./tmp/node02 \
   --chain ./chainspec/raw-parachain-chainspec.json \
   --scheme Sr25519 \
-  --suri "gather outer vessel into mystery beef penalty service mansion drive canvas bike" \
+  --suri "calm tiny ensure glove absurd obscure merit sample foam next weekend smoke" \
   --password-interactive \
   --key-type aura
 
 // aura key for node01
-ubuntu@ip-172-31-20-184:~/xcavate_parachain$ ./target/release/xcavate-parachain-node key generate --scheme Sr25519 --password-interactive
+Cubuntu@ip-172-31-20-184:~/xcavate_parachain./target/release/xcavate-parachain-node key generate --scheme Sr25519 --password-interactiveve
 Key password: 
-Secret phrase:       nuclear camp garage science wreck curtain rapid unfold faith elevator grain enter
+Secret phrase:       toy document inhale claim traffic slot town corn wealth jacket cactus spy
   Network ID:        substrate
-  Secret seed:       0x587d860c4645fc1e88620653c5f43bd94db9b0370bb069ddd27668a9823e3e3a
-  Public key (hex):  0x98a2dc97e83d3f455a82068c7852e8641a3d31b6965286ec5059a875d5cac833
-  Account ID:        0x98a2dc97e83d3f455a82068c7852e8641a3d31b6965286ec5059a875d5cac833
-  Public key (SS58): 5FWqWrwrFaUo3K6JTEYFF3RkLkPSuTZztyRuGkJFo8grLXN3
-  SS58 Address:      5FWqWrwrFaUo3K6JTEYFF3RkLkPSuTZztyRuGkJFo8grLXN3
-ubuntu@ip-172-31-20-184:~/xcavate_parachain$  
+  Secret seed:       0x20d806e18163fd7696575004b518097295a16cd0658ed093c09b7a1b5f1a6142
+  Public key (hex):  0xf0db2f9c7cba34a1ab0dc94183aef3935135503c6e2d6129e84cde0d7ef9c92f
+  Account ID:        0xf0db2f9c7cba34a1ab0dc94183aef3935135503c6e2d6129e84cde0d7ef9c92f
+  Public key (SS58): 5HWWTi9ycguVJPC4VQFEhp6nUDZ1UWhvtrwQG6sSRvKDKaPt
+  SS58 Address:      5HWWTi9ycguVJPC4VQFEhp6nUDZ1UWhvtrwQG6sSRvKDKaPt
+ubuntu@ip-172-31-20-184:~/xcavate_parachain$   
 
 ganesholi@Ganeshs-MacBook-Air xcavate-on-kilt-dip-consumer % ./target/release/xcavate-parachain-node key insert --base-path ./tmp/node01 \
   --chain ./chainspec/raw-parachain-chainspec.json \
   --scheme Sr25519 \
-  --suri "nuclear camp garage science wreck curtain rapid unfold faith elevator grain enter" \
+  --suri "toy document inhale claim traffic slot town corn wealth jacket cactus spy" \
   --password-interactive \
   --key-type aura
